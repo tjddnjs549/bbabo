@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="Home"
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_home_24"/>
+    <item android:title="단골 충전소"
+        android:id="@+id/likelist"
+        android:icon="@drawable/like"/>
+    <item android:title="충전소 검색"
+        android:id="@+id/search"
+        android:icon="@drawable/ic_baseline_search_24"/>
+    <item android:title="게시판"
+        android:id="@+id/notice"
+        android:icon="@drawable/notice"/>
+    <item android:title="이용내역"
+        android:id="@+id/uselist"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_24"/>
+</menu>

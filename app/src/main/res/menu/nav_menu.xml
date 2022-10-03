@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <item android:title="로그인">
+        <menu>
+            <item
+                android:id="@+id/login"
+                android:icon="@drawable/user"
+                android:title="로그인"/>
+        </menu>
+    </item>
+    <item android:title="서비스">
+        <menu>
+            <item
+                android:id="@+id/nav_notice"
+                android:icon="@drawable/warning"
+                android:title="공지사항"/>
+            <item
+                android:id="@+id/service"
+                android:icon="@drawable/service"
+                android:title="서비스 문의 접수"/>
+            <item
+                android:id="@+id/languege"
+                android:icon="@drawable/service"
+                android:title="언어 변환"/>
+        </menu>
+    </item>
+    <item android:title="관리자 권한">
+        <menu>
+            <item
+            android:id="@+id/manager"
+            android:icon="@drawable/ic_baseline_build_24"
+            android:title="관리자 모드"/>
+        </menu>
+    </item>
+</menu>
