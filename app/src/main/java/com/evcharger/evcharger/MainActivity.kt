@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 			true
 		}
 	}
-	// 화면 대체 메서드
+	// 화면 대체 함수
 	private fun replaceFragment(fragment: Fragment) {
 
 		val fragmentManager = supportFragmentManager
