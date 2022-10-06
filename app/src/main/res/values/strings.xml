@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">EvCharger</string>
     <string name="search">충전소 검색</string>
+    <string name="CpName">충전소 명</string>
+    <string name="CpAdress">충전 지역</string>
+    <string name="ChargerType">충전 속도</string>
+    <string name="CpNameSearch">충전소명을 입력해주세요</string>
+    <string name="CpSearchResetBtn">초기화</string>
+    <string name="CpSearchBtn">검색</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

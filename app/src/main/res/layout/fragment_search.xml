@@ -1,18 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5858FF"
+    android:background="#FFFFFF"
     tools:context=".SearchFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="60dp"
-        android:text="@string/search"
-        android:layout_gravity="center"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--안 움직인 이유: 프레임 레이아웃이라서, 그래서 컨스트레인레이아웃을 만들어서 넣어줌 여기선 움직임-->
+        <!--텍스트뷰가 상하좌우가 안됐을때 -->
+
+        <!--충전소 명 텍스트-->
+
+        <!--충전 지역 텍스트-->
+        <TextView
+            android:id="@+id/CpName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/CpName"
+            android:textColor="#8B0000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.038" />
+
+        <TextView
+            android:id="@+id/CpAdress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/CpAdress"
+            android:textColor="#8B0000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.106" />
+
+        <!--충전 타입 테스트-->
+        <TextView
+            android:id="@+id/ChargerType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ChargerType"
+            android:textColor="#8B0000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.145" />
+
+        <EditText
+            android:layout_width="272dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="28dp"
+            android:background="#FAFAD2"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:paddingStart="26dp"
+            android:text="@string/CpNameSearch"
+            android:textColor="#696969"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/CpName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022" />
+
+        <Button
+            android:id="@+id/CpSearchBtn"
+            android:layout_width="188dp"
+            android:layout_height="50dp"
+            android:text="@string/CpSearchBtn"
+            android:background="#CD5C5C"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.928"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.204" />
+
+        <Button
+            android:id="@+id/CpSearchResetBtn"
+            android:layout_width="176dp"
+            android:layout_height="50dp"
+            android:background="#CD5C5C"
+            android:text="@string/CpSearchResetBtn"
+            android:textColor="#1B5E20"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.071"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.204" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </FrameLayout>
+
