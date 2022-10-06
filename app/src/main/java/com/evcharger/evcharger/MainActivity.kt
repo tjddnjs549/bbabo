@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 		drawer.closeDrawers() // 자동으로 네비게이션 뷰 닫기
 		return false
 	}
-
+//신유진 바보
 	//오른쪽을 터치시 메뉴바 나옴
 	private fun toggleDrawerLayout(drawerLayout: DrawerLayout) {
 
