@@ -13,7 +13,7 @@
         android:layout_alignParentEnd="true"
         android:paddingBottom="20dp"
         android:gravity="bottom"
-        android:text="EV charger"
+        android:text="@string/app_name"
         android:textColor="#A593E0"
         android:textSize="50dp" />
 
