@@ -9,27 +9,37 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.evcharger.evcharger.databinding.ActivityMainBinding
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.analytics.FirebaseAnalytics
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.tool_bar.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
+	//뷰바인딩을 위해
 	private lateinit var  binding : ActivityMainBinding
+
+	//홈프래그먼트
 	private lateinit var  homeFragment : HomeFragment
 
 	//메모리에 올라갔을 때
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 
+		//뷰바인딩
 		binding = ActivityMainBinding.inflate(layoutInflater)
 		setContentView(binding.root)
-		
+
+		//토글
 		binding.contentmain.toolbar.more.setOnClickListener {
 			toggleDrawerLayout(binding.root)
 		}
+
 		//햄버거 이모티콘 클릭 시 수행
 		more.setOnClickListener {
 			drawer.openDrawer(GravityCompat.START) // START : left , END : right 랑 같음.
