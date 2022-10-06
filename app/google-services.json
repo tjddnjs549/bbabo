@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "356678251064",
+    "project_id": "evcharger-9c16c",
+    "storage_bucket": "evcharger-9c16c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356678251064:android:8a714d02b7d7fe29652ccd",
+        "android_client_info": {
+          "package_name": "com.evcharger.evcharger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356678251064-fvs58bqe7l347g5s9qksjmjudkahel9d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.evcharger.evcharger",
+            "certificate_hash": "5960b527f7c4b61eec22de263b354777b1f6a00e"
+          }
+        },
+        {
+          "client_id": "356678251064-484cfrgif0jfkccq1jmv38g5dlsslip8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3EBcVGaa5KEkUKMeFq0y5xUXDb1OP2pA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356678251064-484cfrgif0jfkccq1jmv38g5dlsslip8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
