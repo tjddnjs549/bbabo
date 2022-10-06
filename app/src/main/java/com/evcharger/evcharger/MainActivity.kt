@@ -68,7 +68,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 		fragmentTransaction.commit()
 	}
 
-
 	// 네비게이션 메뉴 아이템 클릭 시 수행(조그맣게 나오게 함)
 	override fun onNavigationItemSelected(item: MenuItem): Boolean {
 		when (item.itemId) {
@@ -96,7 +95,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 		drawer.closeDrawers() // 자동으로 네비게이션 뷰 닫기
 		return false
 	}
-//신유진 바보보보ㅗ보보
 	//오른쪽을 터치시 메뉴바 나옴
 	private fun toggleDrawerLayout(drawerLayout: DrawerLayout) {
 
@@ -106,7 +104,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 			drawerLayout.closeDrawer(GravityCompat.START)
 		}
 	}
-	//박성원 소심남 + 잘생김
 	// 백 버튼을 눌렀을 때 수행
 	override fun onBackPressed() {
 		if (drawer.isDrawerOpen(GravityCompat.START)) { //네비게이션 뷰 켜져있으면
