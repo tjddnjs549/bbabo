@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 			true
 		}
 	}
-	// 화면 대체 메서드
+	// 화면 대체 함수
 	private fun replaceFragment(fragment: Fragment) {
 
 		val fragmentManager = supportFragmentManager
@@ -106,6 +106,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 			drawerLayout.closeDrawer(GravityCompat.START)
 		}
 	}
+	//박성원 소심남
 	// 백 버튼을 눌렀을 때 수행
 	override fun onBackPressed() {
 		if (drawer.isDrawerOpen(GravityCompat.START)) { //네비게이션 뷰 켜져있으면
