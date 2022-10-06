@@ -1,5 +1,23 @@
 <resources>
     <string name="app_name">EvCharger</string>
+
+    <!--하단바-->
+    <string name="home_bar">Home</string>
+    <string name="like_list_bar">단골 충전소</string>
+    <string name="search_bar">충전소 검색</string>
+    <string name="notice_bar">게시판</string>
+    <string name="use_list_bar">이용내역</string>
+
+    <!--왼쪽 네비게이션바-->
+    <string name="login_nav_bar">로그인</string>
+    <string name="notice_nav_bar">공지사항</string>
+    <string name="service_nav_bar">서비스 문의 접수</string>
+    <string name="language_nav_bar">언어 변환</string>
+    <string name="manager_nav_bar">관리자 모드</string>
+    <string name="service_bar">서비스</string>
+    <string name="manager_bar">관리자 모드</string>
+
+    <!--충전소 페이지에서 사용-->
     <string name="search">충전소 검색</string>
     <string name="CpName">충전소 명</string>
     <string name="CpAdress">충전 지역</string>
@@ -8,7 +26,28 @@
     <string name="CpSearchResetBtn">초기화</string>
     <string name="CpSearchBtn">검색</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--로그인 페이지에서 사용-->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="signin_email">회원가입 및 이메일 로그인</string>
+    <string name="signin_google">google으로 로그인</string>
+    <string name="signin_facebook">facebook으로 로그인</string>
+    <string name="signin_twitter">twitter으로 로그인</string>
+    <string name="signin_complete">로그인 성공</string>
+    <string name="signup_complete">회원가입 성공</string>
+    <string name="signout">로그아웃 성공</string>
+    <string name="signout_fail">로그아웃 실패</string>
+    <string name="signout_fail_null">이메일과 비밀번호를 입력해주세요</string>
+
+    <!--트위터 api-->
     <string name="com.twitter.sdk.android.CONSUMER_KEY">zCG9xop0cMqgUy2sReCUD5osN</string>
     <string name="com.twitter.sdk.android.CONSUMER_SECRET">cAEdeG73CQeeRxd7UBxc7Rto8HahvaabCAD0C42XLoD6KH9bsh</string>
+
+    <!--페이스북 api-->
+    <string name="facebook_app_id">638980314602905</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+
+
 </resources>
