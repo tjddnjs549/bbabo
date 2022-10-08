@@ -22,8 +22,9 @@
     <color name="lightgray">#FFFFF3</color>
 
     <!--로그인에서 사용-->
+    <color name="colorlogo">#555555</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="colorDivision">#e0e0e0</color>
+    <color name="colorDivision">#A1A1A1</color>
     <color name="colorGoogleSignIn">#d34836</color>
     <color name="colorGoogleSignInPressed">#b02513</color>
     <color name="colorEmailSignIn">#009688</color>
