@@ -1,7 +1,11 @@
 package com.evcharger.evcharger
 
+import android.content.pm.PackageInfo
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Base64
+import android.util.Log
 import android.view.Gravity
 import android.view.MenuItem
 import android.widget.Toast
@@ -9,27 +13,38 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.evcharger.evcharger.databinding.ActivityMainBinding
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.analytics.FirebaseAnalytics
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.tool_bar.*
+import java.security.MessageDigest
+import java.security.NoSuchAlgorithmException
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
+	//뷰바인딩을 위해
 	private lateinit var  binding : ActivityMainBinding
+
+	//홈프래그먼트
 	private lateinit var  homeFragment : HomeFragment
 
 	//메모리에 올라갔을 때
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 
+		//뷰바인딩
 		binding = ActivityMainBinding.inflate(layoutInflater)
 		setContentView(binding.root)
-		
+
+		//토글
 		binding.contentmain.toolbar.more.setOnClickListener {
 			toggleDrawerLayout(binding.root)
 		}
+
 		//햄버거 이모티콘 클릭 시 수행
 		more.setOnClickListener {
 			drawer.openDrawer(GravityCompat.START) // START : left , END : right 랑 같음.
@@ -68,7 +83,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 		fragmentTransaction.commit()
 	}
 
-
 	// 네비게이션 메뉴 아이템 클릭 시 수행(조그맣게 나오게 함)
 	override fun onNavigationItemSelected(item: MenuItem): Boolean {
 		when (item.itemId) {
@@ -96,7 +110,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 		drawer.closeDrawers() // 자동으로 네비게이션 뷰 닫기
 		return false
 	}
-//신유진 바보보보ㅗ보보
 	//오른쪽을 터치시 메뉴바 나옴
 	private fun toggleDrawerLayout(drawerLayout: DrawerLayout) {
 
@@ -106,7 +119,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 			drawerLayout.closeDrawer(GravityCompat.START)
 		}
 	}
-	//ㅡ
 	// 백 버튼을 눌렀을 때 수행
 	override fun onBackPressed() {
 		if (drawer.isDrawerOpen(GravityCompat.START)) { //네비게이션 뷰 켜져있으면
