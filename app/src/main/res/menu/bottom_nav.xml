@@ -2,19 +2,19 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Home"
+    <item android:title="@string/home_bar"
         android:id="@+id/home"
         android:icon="@drawable/ic_baseline_home_24"/>
-    <item android:title="단골 충전소"
+    <item android:title="@string/like_list_bar"
         android:id="@+id/likelist"
         android:icon="@drawable/like"/>
-    <item android:title="충전소 검색"
+    <item android:title="@string/search_bar"
         android:id="@+id/search"
         android:icon="@drawable/ic_baseline_search_24"/>
-    <item android:title="게시판"
+    <item android:title="@string/notice_bar"
         android:id="@+id/notice"
         android:icon="@drawable/notice"/>
-    <item android:title="이용내역"
+    <item android:title="@string/use_list_bar"
         android:id="@+id/uselist"
         android:icon="@drawable/ic_baseline_format_list_bulleted_24"/>
 </menu>
