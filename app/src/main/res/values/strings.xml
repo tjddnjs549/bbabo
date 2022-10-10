@@ -25,6 +25,7 @@
     <string name="CpNameSearch">충전소명을 입력해주세요</string>
     <string name="CpSearchResetBtn">초기화</string>
     <string name="CpSearchBtn">검색</string>
+    <!--string name="CpMap">충전소 지도..?-->
     <!-- TODO: Remove or change this placeholder text -->
 
     <!--로그인 페이지에서 사용-->

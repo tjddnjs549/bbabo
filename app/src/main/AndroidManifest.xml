@@ -14,7 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar"
+        android:networkSecurityConfig="@xml/network_config"
         tools:targetApi="31">
+
+
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -28,7 +31,11 @@
 
     <meta-data
         android:name="com.facebook.sdk.ApplicationId"
-        android:value="@string/facebook_app_id"/>
+        android:value="@string/facebook_app_id"
+        />
+    <meta-data
+        android:name="com.google.android.reo.API_KEY"
+        android:value="AIzaSyCmtRDx_88G8onVMcULi5SCXh90fLIQ8Sc" />
 
     <activity android:name="com.facebook.FacebookActivity"
         android:configChanges=
