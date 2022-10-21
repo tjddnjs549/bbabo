@@ -9,13 +9,14 @@
     <string name="use_list_bar">이용내역</string>
 
     <!--왼쪽 네비게이션바-->
-    <string name="login_nav_bar">로그인</string>
+    <string name="login_bar">로그인</string>
+    <string name="login_nav_bar">마이페이지</string>
     <string name="notice_nav_bar">공지사항</string>
     <string name="service_nav_bar">서비스 문의 접수</string>
     <string name="language_nav_bar">언어 변환</string>
     <string name="manager_nav_bar">관리자 모드</string>
     <string name="service_bar">서비스</string>
-    <string name="manager_bar">관리자 모드</string>
+    <string name="manager_bar">관리자</string>
 
     <!--충전소 페이지에서 사용-->
     <string name="search">충전소 검색</string>
@@ -48,6 +49,8 @@
     <!--페이스북 api-->
     <string name="facebook_app_id">638980314602905</string>
     <string name="fb_login_protocol_scheme">638980314602905</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

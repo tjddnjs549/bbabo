@@ -20,7 +20,11 @@ import com.google.android.material.navigation.NavigationView
 import com.google.firebase.analytics.FirebaseAnalytics
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_login.view.*
+import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.tool_bar.*
+import kotlinx.android.synthetic.main.content_main.*
+import kotlinx.android.synthetic.main.fragment_home.*
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 
@@ -88,7 +92,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 		when (item.itemId) {
 			R.id.login -> {
 				Toast.makeText(applicationContext, "로그인", Toast.LENGTH_SHORT).show()
-				replaceFragment(NoticeFragment())
+				replaceFragment(MypageFragment())
 			}
 			R.id.nav_notice -> {
 				Toast.makeText(applicationContext, "공지사항", Toast.LENGTH_SHORT).show()
