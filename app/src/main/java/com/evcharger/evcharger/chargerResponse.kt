@@ -3,7 +3,7 @@ package com.evcharger.evcharger
 
 import com.squareup.moshi.Json
 
-data class ChargerInfo(
+data class chargerResponse(
     @field:Json(name = "currentCount")
     val currentCount: Int?,
     @field:Json(name = "data")

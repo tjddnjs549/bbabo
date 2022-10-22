@@ -1,16 +1,18 @@
 package com.evcharger.evcharger
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.evcharger.evcharger.databinding.FragmentHomeBinding
-import kotlinx.android.synthetic.main.fragment_home.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 private const val ARG_PARAM1 = "param1"
@@ -20,6 +22,7 @@ class HomeFragment : Fragment() {
 
 	private var param1: String? = null
 	private var param2: String? = null
+	private val listItems = arrayListOf<ListLayout>()
 	private val binding: FragmentHomeBinding by lazy {
 		FragmentHomeBinding.inflate(layoutInflater)
 	}
@@ -50,8 +53,40 @@ class HomeFragment : Fragment() {
 			addItemDecoration(DividerItemDecoration(context,DividerItemDecoration.VERTICAL))
 		}
 
+		binding.mainSearchBtn.setOnClickListener {
+			retrofitWork()
+		}
+
 		//여기다 채우기
 		return view
+	}
+	private fun retrofitWork() {
+
+		val service = RetrofitApi.chargerService
+
+		service.getChargerData(getString(R.string.charger_key), "json")
+			.enqueue(object : Callback<chargerResponse> {
+				override fun onResponse(
+					call: Call<chargerResponse>,
+					response: Response<chargerResponse>
+				) { addItemsAndMarkers(response.body()) }
+				override fun onFailure(call: Call<chargerResponse>, t: Throwable) {
+					Log.d("TAG",t.message.toString())
+				}
+			})
+	}
+	private fun addItemsAndMarkers(searchResult: chargerResponse?) {
+
+		for (document in searchResult!!.data!!) {
+			// 결과를 리사이클러 뷰에 추가
+			val item = ListLayout(
+				document?.addr,
+				document?.cpNm,
+				document?.cpTp
+			)
+			listItems.add(item)
+
+		}
 	}
 	
 	//정적 메모리

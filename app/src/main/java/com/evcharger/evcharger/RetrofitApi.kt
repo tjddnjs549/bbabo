@@ -1,10 +1,33 @@
 package com.evcharger.evcharger
 
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Retrofit
+import retrofit2.converter.moshi.MoshiConverterFactory
 
 
 object RetrofitApi {
-	private const val BASE_URL = "https://api.odcloud.kr/api/EvInfoServiceV2/v1/getEvSearchList?page=1&perPage=3106&serviceKey=rx5IpuRIe4cndUDxaaKEVnTi1%2Bzdzfy%2B8aRM%2BgAstxqIq%2FTO6pwrsFWGwWLEiiJ7YseGrHGMYBsztFE%2BKOr6XQ%3D%3D"
+	private val okHttpClient: OkHttpClient by lazy {
+		OkHttpClient.Builder()
+			.addInterceptor(HttpLoggingInterceptor().apply {
+				level = HttpLoggingInterceptor.Level.BODY
+			})
+			.build()
+	}
 
+	private const val BASE_URL =
+		"http://openapi.kepco.co.kr/"
+
+	private val retrofit: Retrofit by lazy {
+		Retrofit.Builder().addConverterFactory(MoshiConverterFactory.create())
+			.client(okHttpClient)
+			.baseUrl(BASE_URL)
+			.build()
+	}
+
+	val chargerService: ChargerService by lazy {
+		retrofit.create(ChargerService::class.java)
+	}
+}
 
 

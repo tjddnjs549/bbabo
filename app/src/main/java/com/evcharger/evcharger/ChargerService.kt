@@ -8,5 +8,5 @@ interface ChargerService {
 
 	@GET("ChargerInfo")
 	fun getChargerData(@Query("KEY")KEY : String,
-		               @Query("Type") Type : String): Call<Data>
+		               @Query("Type") Type : String): Call<ChargerInfo>
 }
