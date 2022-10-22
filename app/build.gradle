@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android-extensions'
     id 'com.google.gms.google-services'
+    id 'kotlin-android'
 }
 
 android {
@@ -14,6 +15,7 @@ android {
         targetSdk 32
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true //구글 지도 새 모듈 생성 및 빌드 그래들 설정
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -29,11 +31,11 @@ android {
         viewBinding true
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
     }
     namespace 'com.evcharger.evcharger'
 }
@@ -50,10 +52,21 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.8' //파이어베이스 로그인 지원
     implementation 'com.google.android.gms:play-services-auth:20.3.0'
     implementation 'com.google.firebase:firebase-auth:21.0.8'//구글 로그인 지원
+    implementation 'com.google.maps.android:android-maps-utils:2.3.0'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'//구글 맵 클러스트 사용을 위한 라이브러리
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    implementation 'de.hdodenhof:circleimageview:3.1.0' //,원형 이미지뷰
+    implementation 'de.hdodenhof:circleimageview:3.1.0' //원형 이미지뷰
     implementation 'com.facebook.android:facebook-android-sdk:[8,9)' //페이스북 로그인 지원
     implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1'
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+
+    //okhttp
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
 }
